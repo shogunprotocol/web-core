@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import SketchfabViewer from '@/components/SketchfabViewer';
+import SketchfabViewer from './SketchfabViewer';
 
 export default function AnimatedViewer() {
   return (

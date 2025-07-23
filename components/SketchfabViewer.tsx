@@ -1,6 +1,6 @@
 'use client';
 
-import { Canvas } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 import {
   OrbitControls,
   useGLTF,
@@ -12,8 +12,8 @@ import { Suspense, useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 
 // Preload the models
-useGLTF.preload('/Shadow_Samurai_0421124229_texture.glb');
-useGLTF.preload('/Silent_Sentinel_0421125104_texture.glb');
+useGLTF.preload('/3D/Shadow_Samurai_0421124229_texture.glb');
+useGLTF.preload('/3D/Silent_Sentinel_0421125104_texture.glb');
 
 function Model({
   position,
@@ -49,7 +49,6 @@ function Model({
         if (child.material) {
           // Add some emissive glow to existing materials
           child.material.emissive = new THREE.Color('#44FBDE');
-          // child.material.emissive = new THREE.Color('white');
           child.material.emissiveIntensity = 0.15;
 
           // Adjust material properties for better look
@@ -92,10 +91,22 @@ function Model({
 
   // Calculate mobile-adjusted position and scale
   const mobilePosition: [number, number, number] = isMobile
-    ? [position[0] * 0.4, position[1], position[2]] // Move models more toward center on mobile
+    ? [position[0] * 0.7, position[1], position[2]] // Move models slightly more toward center on mobile
     : position;
 
-  const mobileScale = isMobile ? scale * 0.8 : scale; // Make models smaller on mobile
+  const mobileScale = isMobile ? scale * 0.8 : scale; // Slightly smaller on mobile for better fit
+
+  // Breathing animation
+  useFrame((state) => {
+    if (modelRef.current) {
+      const time = state.clock.elapsedTime;
+      const breathingScale = 1 + Math.sin(time * 0.5) * 0.02; // Subtle breathing effect
+      const breathingY = Math.sin(time * 0.3) * 0.1; // Gentle up and down movement
+
+      modelRef.current.scale.setScalar(mobileScale * breathingScale);
+      modelRef.current.position.y = mobilePosition[1] + breathingY;
+    }
+  });
 
   return (
     <primitive
@@ -137,8 +148,8 @@ export default function SketchfabViewer() {
     <div className="w-full h-full">
       <Canvas
         camera={{
-          position: [0, 0, isMobile ? 30 : 25],
-          fov: isMobile ? 40 : 30,
+          position: [0, 0, isMobile ? 28 : 25],
+          fov: isMobile ? 50 : 40,
         }}
         gl={{
           alpha: true,
@@ -174,18 +185,18 @@ export default function SketchfabViewer() {
         <Suspense fallback={<ModelLoader />}>
           {/* Left Model - Shadow Samurai */}
           <Model
-            position={[-9, -3, 0]}
+            position={[-10, -3, 0]}
             rotation={[Math.PI * 0.05, Math.PI * 0.35, 0]}
-            modelPath="/Shadow_Samurai_0421124229_texture.glb"
-            scale={10}
+            modelPath="/3D/Shadow_Samurai_0421124229_texture.glb"
+            scale={12}
           />
 
           {/* Right Model - Silent Sentinel */}
           <Model
-            position={[9, -3, 0]}
+            position={[10, -3, 0]}
             rotation={[Math.PI * 0.05, -Math.PI * 0.55, 0]}
-            modelPath="/Silent_Sentinel_0421125104_texture.glb"
-            scale={10}
+            modelPath="/3D/Silent_Sentinel_0421125104_texture.glb"
+            scale={12}
           />
 
           <Environment preset="studio" />

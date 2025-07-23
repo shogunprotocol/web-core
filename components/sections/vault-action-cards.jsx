@@ -10,7 +10,7 @@ import Button from "@/components/lunar/Button";
 import { GridPattern } from "@/components/lunar/GridPattern";
 import { SectionTitle, SectionTitleFade, SectionWrapper } from "@/components/lunar/Section";
 import { SpotlightCard } from "@/components/lunar/SpotlightCard";
-import TransactionModal from "@/components/modals";
+import StyledTransactionModal from "@/components/modals/StyledTransactionModal";
 
 const VaultActionCards = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -147,7 +147,7 @@ const VaultActionCards = () => {
                 </motion.div>
             </SectionWrapper>
 
-            <TransactionModal
+            <StyledTransactionModal
                 isOpen={isOpen}
                 onClose={onClose}
                 type={transactionType}

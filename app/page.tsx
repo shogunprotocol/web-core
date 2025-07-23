@@ -13,7 +13,7 @@ const HomePage = dynamicImport(() => import('../components/home-page/index'), {
         <p>Loading the experience...</p>
       </div>
     </div>
-  )
+  ),
 });
 
 export default function Home() {

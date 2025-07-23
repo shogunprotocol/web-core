@@ -1,7 +1,8 @@
 .footer {
-  position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
 
   &::before {
     content: '';
@@ -20,4 +21,11 @@
     padding-top: desktop-vw(40px);
     padding-bottom: desktop-vw(40px);
   }
+}
+
+.footerLinks {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 30%;
 }
