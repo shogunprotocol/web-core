@@ -1,0 +1,25 @@
+Business Source License 1.1
+
+Licensor: Lautaro Suárez, Tomás Del manzo Oliver, Sebastián Luján  
+Licensor Contact: team@shogun.xyz  
+Effective Date: 2025-07-24  
+Change Date: 2027-07-24  
+Change License: MIT
+
+Licensed Work: All code in this repository, unless otherwise stated.
+
+Use Limitation:  
+This code may be used free of charge **only** for non-commercial purposes, including education, testing, experimentation, and personal projects.
+
+🚫 Commercial use — including SaaS, resale, internal use in revenue-generating environments, or integration into paid products — **requires a commercial license** from the Licensors. Contact tomas.d.manzo.oliver@gmail.com for licensing terms.
+
+After the Change Date, this code will be licensed under the MIT License.
+
+Additional Terms:  
+This license must be included with all copies or substantial portions of the Licensed Work.  
+The Licensed Work is provided “as is”, without warranties or guarantees of any kind.
+
+---
+
+Inspired by the Business Source License (BSL) by MariaDB Corporation Ab.  
+See https://mariadb.com/bsl11 for full legal context.

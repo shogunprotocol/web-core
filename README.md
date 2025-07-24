@@ -1,7 +1,5 @@
 ![Shōgun DeFAI Super Vaults](header.gif)
 
-
-
 # Shōgun: DeFAI Super Vaults
 
 A decentralized finance (DeFi) vault system with an AI agent managing asset allocation and investment strategies. This project demonstrates the integration of artificial intelligence with blockchain technology to create an automated, intelligent investment platform on Sonic mainnet.
@@ -25,10 +23,10 @@ Shōgun is currently live on Sonic mainnet with two active DeFi strategies that 
 
 ### Repositories
 
-* **AI Strategy Manager:** [strategies-ai-sonic](https://github.com/lausuarez02/strategies-ai-sonic/)
-* **Agent Implementation:** [strategies-agent-sonic](https://github.com/lausuarez02/strategies-agent-sonic/)
-* **Smart Contracts AI:** [strategies-contracts-sonic](https://github.com/lausuarez02/strategies-contracts-sonic/)
-* **Smart Contracts Investing:** [contracts-sonic](https://github.com/lausuarez02/strategies-contracts-sonic/]
+- **AI Strategy Manager:** [strategies-ai-sonic](https://github.com/lausuarez02/strategies-ai-sonic/)
+- **Agent Implementation:** [strategies-agent-sonic](https://github.com/lausuarez02/strategies-agent-sonic/)
+- **Smart Contracts AI:** [strategies-contracts-sonic](https://github.com/lausuarez02/strategies-contracts-coredao/)
+- **Smart Contracts Investing:** [contracts-sonic](https://github.com/lausuarez02/strategies-contracts-sonic/]
 
 ## Tech Stack
 
@@ -47,7 +45,7 @@ Shōgun is currently live on Sonic mainnet with two active DeFi strategies that 
 
 - **Safe** (formerly Gnosis Safe) - Multi-signature wallet infrastructure
 - **Viem** - TypeScript Ethereum library
-- **Sonic Mainnet** - Deployment chain
+- **CoreDao Mainnet** - Deployment chain
 - **USDC.e** - Stablecoin integration
 
 ### Safe Integration
@@ -83,6 +81,7 @@ Shōgun is currently live on Sonic mainnet with two active DeFi strategies that 
 ## Market Position
 
 Shōgun uniquely occupies the high-yield + passive management quadrant in the DeFi landscape:
+
 - Delivers Morpho-level yields with Superform-level passivity
 - Combines the best of active management returns with passive user experience
 - Uses AI to bridge the gap between yield and convenience
@@ -115,11 +114,13 @@ Our vault system utilizes Safe's multi-signature infrastructure to:
 Key features include:
 
 1. **Multi-signature Transactions**
+
    - Required multiple approvals for large transactions
    - Configurable threshold settings
    - Transaction queue management
 
 2. **Access Control**
+
    - Role-based permissions
    - Granular control over vault operations
    - Admin management
@@ -134,12 +135,14 @@ Key features include:
 The Shōgun Council is our sophisticated AI agent that:
 
 1. **Market Analysis**
+
    - Processes on-chain data and market trends
    - Identifies yield opportunities across protocols
    - Evaluates protocol risk with Allora Network
    - Analyzes market sentiment
 
 2. **Portfolio Management**
+
    - Optimizes asset allocation for maximum yield
    - Executes rebalancing strategies when profitable
    - Manages risk exposure across various strategies
@@ -154,6 +157,7 @@ The Shōgun Council is our sophisticated AI agent that:
 ## Smart Contract Integration
 
 The vault system interacts with multiple smart contracts to:
+
 - Handle deposits and withdrawals of USDC.e
 - Issue vault shares representing user stakes
 - Execute trades across protocols
@@ -171,6 +175,7 @@ The vault system interacts with multiple smart contracts to:
 ## Governance: The Ronin Council
 
 The AI Ronin Council is our governance framework that allows users to:
+
 - Propose new investment strategies
 - Vote on protocol parameters
 - Participate in strategic decisions
@@ -187,19 +192,21 @@ The AI Ronin Council is our governance framework that allows users to:
 
 Contributions are welcome! Please read our contributing guidelines before submitting pull requests.
 
-## License
+## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the **Business Source License 1.1**.  
+Free for non-commercial use.  
+Commercial use requires a license — contact us at [team@shogun.xyz](mailto:tomas.d.manzo.oliver@gmail.com).  
+See [LICENSE](./LICENSE) for full terms.
 
 ## Acknowledgments
 
-- [Sonic Labs Documentation](https://docs.soniclabs.com/)
+- [CoreDao Documentation](https://docs.coredao.org/)
 - [Next.js Documentation](https://nextjs.org/docs)
 - [RainbowKit](https://www.rainbowkit.com/)
 - [Wagmi Hooks](https://wagmi.sh/)
 - [Safe Documentation](https://docs.safe.global/)
-- [deBridge Documentation](https://docs.debridge.finance/)
-- [Allora Network Documentation](https://docs.allora.network/)
+- [Hummingbot Documentation](https://hummingbot.org/blog/hummingbot-dashboard-quickstart-guide/#installation)
 
 ## Deploy on Vercel
 

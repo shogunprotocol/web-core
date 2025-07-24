@@ -58,7 +58,7 @@ export default function Card4() {
 
                         {/* Text */}
                         <div className="font-display text-xs font-semibold text-white sm:text-xs lg:text-sm font-belgro ml-4">
-                            Sonic DeFAI Hackathon 2025
+                            CoreDAO Hackathon 2025
                         </div>
                     </div>
                 </SpotlightCard>

@@ -22,7 +22,7 @@ export default function Card2() {
 
                     {/* Text */}
                     <div className="font-display text-[6px] font-semibold text-white sm:text-[8px] lg:text-[10px] font-belgro ml-4">
-                        Built using Sonic Labs, Debridge, Allora Network, Safe, Next.js, RainbowKit, Wagmi, TailwindCSS.
+                        Built using CoreDao, HummiingBot, LayerZero,  Next.js, RainbowKit, Wagmi, TailwindCSS.
                     </div>
                 </div>
             </SpotlightCard>

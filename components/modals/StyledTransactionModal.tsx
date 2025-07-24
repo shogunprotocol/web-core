@@ -29,12 +29,12 @@ import { GridPattern } from '../lunar/GridPattern';
 const strategies = [
   {
     name: 'deBridge',
-    description: 'Cross-chain bridging from Sonic to Arbitrum for Aave yield',
+    description: 'Cross-chain bridging from CoreDao to Arbitrum for Aave yield',
     icon: 'Bridge',
     details:
       'Secure cross-chain asset transfer to access higher Aave yields on Arbitrum',
     status: 'Active',
-    protocol: 'Sonic to Arbitrum',
+    protocol: 'CoreDao to Arbitrum',
   },
   {
     name: 'Beefy Finance',

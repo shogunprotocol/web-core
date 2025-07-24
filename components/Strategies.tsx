@@ -4,26 +4,26 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from '@/components/ui/card';
 
 const strategies = [
   {
-    name: "Silo Finance",
-    description: "Lending and borrowing optimization on Aave protocol",
-    icon: "💰",
-    details: "Automated lending position management for optimal yields",
+    name: 'Silo Finance',
+    description: 'Lending and borrowing optimization on Aave protocol',
+    icon: '💰',
+    details: 'Automated lending position management for optimal yields',
   },
   {
-    name: "Beets",
-    description: "Dex and yield farming on Beets",
-    icon: "⚖️",
-    details: "Strategic liquidity deployment across various pools",
+    name: 'Beets',
+    description: 'Dex and yield farming on Beets',
+    icon: '⚖️',
+    details: 'Strategic liquidity deployment across various pools',
   },
   {
-    name: "Origin Sonic",
-    description: "Liquid staking and validator rewards optimization",
-    icon: "🌊",
-    details: "Efficient management of staking positions",
+    name: 'Origin CoreDao',
+    description: 'Liquid staking and validator rewards optimization',
+    icon: '🌊',
+    details: 'Efficient management of staking positions',
   },
 ];
 
