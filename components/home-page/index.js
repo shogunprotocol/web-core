@@ -21,8 +21,8 @@ export default function Home() {
             {/* Video background section */}
             <div className="video-wrapper font-aeonik">
               <VideoContainer />
-              <div className={s.container}>
-                <section className={s.content}>
+              <div className="flex flex-col">
+                <section className="">
                   <TitlesContainer />
                 </section>
                 <div className={s.cardGridContainer}>
