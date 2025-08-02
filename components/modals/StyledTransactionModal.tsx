@@ -153,13 +153,13 @@ const StyledTransactionModal = ({
 
       setAmount('');
       onClose();
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error(error);
       errorAudioRef.current.play();
 
       if (
-        error.message?.includes('User rejected') ||
-        error.message?.includes('User denied')
+        (error as Error)?.message?.includes('User rejected') ||
+        (error as Error)?.message?.includes('User denied')
       ) {
         toast({
           title: 'Transaction Cancelled',

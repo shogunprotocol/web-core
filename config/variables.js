@@ -34,7 +34,14 @@ const viewports = {
   },
 };
 
-module.exports = {
+export {
+  colors,
+  themes,
+  breakpoints,
+  viewports,
+};
+
+export default {
   colors,
   themes,
   breakpoints,

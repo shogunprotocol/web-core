@@ -36,7 +36,7 @@ export function Hero() {
             initial="hidden"
             whileInView="show"
             className="relative pt-32"
-            viewport={{ once: false, amount: 0.1 }}
+            viewport={{ once: true, amount: 0.1 }}
         >
             <SectionWrapper className="py-8 lg:py-16">
                 <motion.div

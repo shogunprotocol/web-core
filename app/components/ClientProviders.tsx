@@ -7,7 +7,7 @@ import Tempus from '@studio-freight/tempus';
 import { DeviceDetectionProvider } from '../../components/device-detection';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import Providers from "../../components/providers";
+import Providers from '../../components/providers';
 import { useStore } from '../../libs/store';
 import { useEffect } from 'react';
 import { Toaster } from 'sonner';
@@ -31,13 +31,9 @@ if (typeof window !== 'undefined') {
   }, 0);
 }
 
-export default function ClientProviders({
-  children,
-}: {
-  children: ReactNode;
-}) {
+export default function ClientProviders({ children }: { children: ReactNode }) {
   const lenis = useLenis(ScrollTrigger.update);
-  useEffect(ScrollTrigger.refresh, [lenis]);
+  useEffect(() => ScrollTrigger.refresh(), [lenis]);
 
   const isNavOpened = useStore(({ isNavOpened }) => isNavOpened);
 
@@ -55,11 +51,11 @@ export default function ClientProviders({
       <DeviceDetectionProvider>
         <NextUIProvider>
           <Providers>
-              {children}
-              <Toaster richColors />
+            {children}
+            <Toaster richColors />
           </Providers>
         </NextUIProvider>
       </DeviceDetectionProvider>
     </>
   );
-} 
+}

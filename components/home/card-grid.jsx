@@ -1,23 +1,49 @@
 // CardGrid.js
-
-
 'use client';
 import { motion } from 'framer-motion';
 import React from 'react';
-import { staggerContainer } from "@/libs/motion";
+import { useSiteReady } from '@/libs/site-ready-context';
 import Card1 from '@/components/home/card-1';
 import Card2 from '@/components/home/card-2';
 import Card3 from '@/components/home/card-3';
 import Card4 from '@/components/home/card-4';
 import Card5 from '@/components/home/card-5';
+
 const CardGrid = () => {
+  const { animationsEnabled } = useSiteReady();
+
+  // Animaciones simplificadas
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: { 
+      opacity: 1,
+      transition: { duration: 0.4, staggerChildren: 0.1 }
+    }
+  };
+
+  // Si las animaciones están deshabilitadas, renderizar directamente
+  if (!animationsEnabled) {
+    return (
+      <div className="p-w sm:p-4 lg:p-20 align-end">
+        <div className="grid grid-cols-1 sm:grid sm:grid-cols-4 lg:grid-cols-2 grid-rows-3 lg:grid-rows-3 gap-2 md:gap-2">
+          <Card1 />
+          <Card2 />
+          <Card3 />
+          <Card4 />
+          <Card5 />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <motion.div
-      variants={staggerContainer}
+      variants={containerVariants}
       initial="hidden"
-      whileInView="show"
-      viewport={{ once: false, amount: 0.25 }}
-      className="p-w sm:p-4 lg:p-20 align-end">
+      animate="show"
+      viewport={{ once: true, amount: 0.25 }}
+      className="p-w sm:p-4 lg:p-20 align-end"
+    >
       <div className="grid grid-cols-1 sm:grid sm:grid-cols-4 lg:grid-cols-2 grid-rows-3 lg:grid-rows-3 gap-2 md:gap-2">
         <Card1 />
         <Card2 />

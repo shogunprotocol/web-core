@@ -43,7 +43,7 @@ function castToSass(jsValue) {
     // Array -> List
     var list = new sass.types.List(jsValue.length)
     for (var i = 0; i < jsValue.length; i++) {
-      list.setValue(i, this.castToSass(jsValue[i]))
+      list.setValue(i, castToSass(jsValue[i]))
     }
     var isComma =
       typeof jsValue.separator === 'undefined' ? true : jsValue.separator
@@ -66,7 +66,7 @@ function castToSass(jsValue) {
     for (var m = 0; m < keys.length; m++) {
       var key = keys[m]
       map.setKey(m, new sass.types.String(key))
-      map.setValue(m, this.castToSass(jsValue[key]))
+      map.setValue(m, castToSass(jsValue[key]))
     }
     return map
   } else {

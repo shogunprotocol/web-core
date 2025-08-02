@@ -1,30 +1,56 @@
-// useHoverEffect.js
+// useHoverEffect.js - Optimized version
 import { colors } from '@/config/variables';
-import gsap from 'gsap';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import { useSiteReady } from '@/libs/site-ready-context';
 
-const useHoverEffect = (ref) => {
+const useHoverEffect = (ref, disabled = false) => {
+  const { animationsEnabled } = useSiteReady();
+  const cleanupRef = useRef(null);
+
   useEffect(() => {
-    if (ref.current) {
-      const element = ref.current;
-      const text = element.textContent;
-      const words = text.split(' ');
-      element.innerHTML = '';
-
-      words.forEach((word) => {
-        const span = document.createElement('span');
-        span.textContent = word + ' ';
-        span.style.transition = 'color 0.2s';
-        span.addEventListener('mouseenter', () => {
-          gsap.to(span, { color: colors.cyan, duration: 0.2 });
-        });
-        span.addEventListener('mouseleave', () => {
-          gsap.to(span, { color: 'inherit', duration: 0.2 });
-        });
-        element.appendChild(span);
-      });
+    // Skip if animations are disabled or explicitly disabled
+    if (!animationsEnabled || disabled || !ref.current) {
+      return;
     }
-  }, [ref]);
+
+    const element = ref.current;
+    const text = element.textContent;
+    
+    // Simple CSS-only hover effect instead of complex DOM manipulation
+    element.style.transition = 'color 0.3s ease';
+    element.style.cursor = 'pointer';
+    
+    const handleMouseEnter = () => {
+      element.style.color = colors.cyan;
+    };
+    
+    const handleMouseLeave = () => {
+      element.style.color = 'inherit';
+    };
+
+    element.addEventListener('mouseenter', handleMouseEnter);
+    element.addEventListener('mouseleave', handleMouseLeave);
+
+    // Store cleanup function
+    cleanupRef.current = () => {
+      element.removeEventListener('mouseenter', handleMouseEnter);
+      element.removeEventListener('mouseleave', handleMouseLeave);
+      element.style.transition = '';
+      element.style.cursor = '';
+      element.style.color = '';
+    };
+
+    return cleanupRef.current;
+  }, [ref, animationsEnabled, disabled]);
+
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      if (cleanupRef.current) {
+        cleanupRef.current();
+      }
+    };
+  }, []);
 };
 
 export default useHoverEffect;
