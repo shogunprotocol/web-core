@@ -35,12 +35,7 @@ export function Navigation() {
         >
           THE COUNCIL
         </Link>
-        <Link
-          className="font-basement hover:text-basement-cyan p-4 text-lg"
-          href="/about"
-        >
-          ABOUT
-        </Link>
+      
       </div>
     </Lenis>
   );

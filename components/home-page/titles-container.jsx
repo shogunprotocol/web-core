@@ -81,7 +81,6 @@ const TitlesContainer = () => {
       viewport={{ once: true, amount: 0.25 }}
       className="w-11/12  mx-auto px-6 mt-32"
     >
-      {/* Header: Solo títulos */}
       <div className="flex flex-col gap-6 mb-16 text-center lg:text-left">
         <motion.div
           variants={itemVariants}

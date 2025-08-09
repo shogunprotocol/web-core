@@ -50,11 +50,9 @@ export const Header = forwardRef((_, ref) => {
           </Link>
         </div>
         
-        <div className="uppercase font-basement flex items-center">
-          <Link href="/council" className="link px-4">
-            The Council
-          </Link>
-          <ConnectButton />
+        {/* Right side: Connect wallet */}
+        <div className="flex items-center gap-2">
+          <ConnectButton chainStatus="icon" showBalance={false} />
         </div>
       </div>
     </header>
