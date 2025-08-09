@@ -2,7 +2,7 @@
 
 # Shōgun: DeFAI Super Vaults
 
-A decentralized finance (DeFi) vault system with an AI agent managing asset allocation and investment strategies. This project demonstrates the integration of artificial intelligence with blockchain technology to create an automated, intelligent investment platform on Sonic mainnet.
+A decentralized finance (DeFi) vault system with an AI agent managing asset allocation and investment strategies. This project demonstrates the integration of artificial intelligence with blockchain technology to create an automated, intelligent investment platform on Sonic mainnet
 
 ## Overview
 
