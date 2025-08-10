@@ -128,7 +128,7 @@ const StyledTransactionModal = ({
 
         toast({
           title: 'Deposit Successful',
-          description: `${amount} USDC successfully powered up`,
+          description: `${amount} stCORE successfully powered up`,
           variant: 'success',
         });
       } else {
@@ -144,7 +144,7 @@ const StyledTransactionModal = ({
 
         toast({
           title: 'Withdrawal Successful',
-          description: `${amount} USDC successfully withdrawn`,
+          description: `${amount} stCORE successfully withdrawn`,
           variant: 'success',
         });
       }
@@ -415,7 +415,7 @@ const StyledTransactionModal = ({
                           {totalAssets
                             ? formatUnits(totalAssets as bigint, 6)
                             : '0'}{' '}
-                          USDC
+                          stCORE
                         </p>
                       </div>
                     </Tooltip>
@@ -428,7 +428,7 @@ const StyledTransactionModal = ({
                       autoFocus
                       type="number"
                       label={`${type === 'deposit' ? 'Deposit' : 'Withdraw'} Amount`}
-                      placeholder="Enter amount in USDC"
+                      placeholder="Enter amount in stCORE"
                       variant="bordered"
                       value={amount}
                       onChange={handleAmountChange}

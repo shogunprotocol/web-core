@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import { useAccount, useReadContract } from "wagmi";
-import { formatUnits } from "viem";
-import { CONTRACT_ADDRESS, VAULT_ABI } from "@/constants/index";
+import { useAccount, useReadContract } from 'wagmi';
+import { formatUnits } from 'viem';
+import { CONTRACT_ADDRESS, VAULT_ABI } from '@/constants/index';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from '@/components/ui/card';
 
 export function VaultBalance() {
   const { address: userAddress } = useAccount();
@@ -17,14 +17,14 @@ export function VaultBalance() {
   const { data: userBalance } = useReadContract({
     address: CONTRACT_ADDRESS as `0x${string}`,
     abi: VAULT_ABI,
-    functionName: "balanceOf",
+    functionName: 'balanceOf',
     args: [userAddress as `0x${string}`],
   });
 
   const { data: totalAssets } = useReadContract({
     address: CONTRACT_ADDRESS as `0x${string}`,
     abi: VAULT_ABI,
-    functionName: "totalAssets",
+    functionName: 'totalAssets',
   });
 
   return (
@@ -44,7 +44,7 @@ export function VaultBalance() {
               Your Balance
             </p>
             <p className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400">
-              {userBalance ? formatUnits(userBalance, 6) : "0"} shares
+              {userBalance ? formatUnits(userBalance, 6) : '0'} shares
             </p>
           </div>
           <div className="p-6 rounded-xl bg-gradient-to-br from-white/80 to-white/40 dark:from-black/40 dark:to-black/20 backdrop-blur-sm border border-white/20 shadow-lg transition-transform duration-200 hover:scale-105">
@@ -52,7 +52,7 @@ export function VaultBalance() {
               Total Assets
             </p>
             <p className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400">
-              {totalAssets ? formatUnits(totalAssets, 6) : "0"} USDC
+              {totalAssets ? formatUnits(totalAssets, 6) : '0'} stCORE
             </p>
           </div>
         </div>

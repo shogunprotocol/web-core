@@ -46,18 +46,13 @@ Shōgun is currently live on Sonic mainnet with two active DeFi strategies that 
 - **Safe** (formerly Gnosis Safe) - Multi-signature wallet infrastructure
 - **Viem** - TypeScript Ethereum library
 - **CoreDao Mainnet** - Deployment chain
-- **USDC.e** - Stablecoin integration
+- **stCORE** - Stablecoin integration
 
 ### Safe Integration
 
 - **@safe-global/safe-core-sdk** - Core Safe functionality
 - **@safe-global/safe-ethers-lib** - Safe Ethereum library
 - **@safe-global/sdk-starter-kit** - Safe development toolkit
-
-### Partner Integrations
-
-- **deBridge** - Cross-chain transaction execution
-- **Allora Network** - Decentralized intelligence for risk assessment
 
 ### AI/ML Components
 
