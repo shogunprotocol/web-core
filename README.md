@@ -18,6 +18,7 @@
 ## Repositories
 
 - **This repo (you are here):** App, vault UX, CoreDAO config, docs.
+- **Contracts (core Contracts):** 👉 [https://github.com/shogunprotocol/shogun-core-ai](https://github.com/shogunprotocol/contracts-core)
 - **AI Engine (multi-agent intelligence & execution):** 👉 https://github.com/shogunprotocol/shogun-core-ai
 
 ---
